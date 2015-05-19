@@ -1,5 +1,5 @@
 # Description:
-#   Say Hi to Hubot.
+#   Accepts POST from BugSnag.
 #
 # Dependencies:
 #   None
@@ -8,8 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot hello - "hello!"
-#   hubot orly - "yarly"
+#   POST /hubot/bugsnag
 #
 # Author:
 #   veverkap
@@ -20,13 +19,15 @@ path = require 'path'
 module.exports = (robot, scripts) ->
   robot.router.post '/hubot/bugsnag/:room', (req, res) ->
     try
-      # ...
+      robot.logger.info "Hubot received BugSnag POST with params:"
+      robot.logger.info req.params
+      robot.logger.info "Hubot received BugSnag POST with body:"
+      robot.logger.info req.body
       room   = req.params.room
-      robot.logger.info req.body.payload
-      data   = JSON.parse req.body.payload
-      secret = data.secret
+      robot.logger.info "Hubot will post to room #{room}"
+      error = req.body.error
 
-      robot.messageRoom room, "I have a secret: #{secret}"
+      robot.messageRoom room, "I have a secret: #{req.body.error}"
 
     catch error
       robot.messageRoom room, "Whoa, I got an error: #{error}"
