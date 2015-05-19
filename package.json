@@ -1,7 +1,7 @@
 {
   "name": "hubot-bugsnag",
   "description": "Have Hubot Talk Bugsnag",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Patrick Veverka <patrick.veverka+bs@threatsim.com>",
   "license": "MIT",
   "keywords": [
