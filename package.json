@@ -1,8 +1,8 @@
 {
-  "name": "hubot-example",
-  "description": "An example script package for Hubot",
-  "version": "1.0.0",
-  "author": "Tom Bell <tomb@tomb.io>",
+  "name": "hubot-bugsnag",
+  "description": "Have Hubot Talk Bugsnag",
+  "version": "0.0.1",
+  "author": "Patrick Veverka <patrick.veverka+bs@threatsim.com>",
   "license": "MIT",
 
   "keywords": [
@@ -12,11 +12,11 @@
 
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-example.git"
+    "url": "git://github.com/threatsim/hubot-bugsnag.git"
   },
 
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-example/issues"
+    "url": "https://github.com/threatsim/hubot-bugsnag/issues"
   },
 
   "dependencies": {
